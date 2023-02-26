@@ -1,0 +1,198 @@
+rpc--
+
+factorial number::
+
+x file:-
+struct number{
+	int num;
+};
+
+program FACTPRO{
+	version FACTVER{
+		int factorial(number)=1;
+	}=2;
+}=0x2fffffff;
+
+
+client file::::-
+printf("Enter number to find its Factorial:");
+scanf("%d", &factorial_2_arg.num);
+
+
+else{
+		printf("Factorial: %d", *result_1);
+	}
+
+server file:::::-
+static int input=1;
+	
+	for(int i=1; i<=argp->num; i++){
+		input = input * i;
+	}
+
+	result = input;
+
+
+reverse number::::::-
+x file::-
+struct input{
+	int val;
+};
+
+program REVPRO{
+	version REVVER{
+		int rev(input)=1;
+	}=2;
+}=0x2fffffff;
+
+
+client file::-
+printf("Enter a number to Reverse: ");
+	scanf("%d", &rev_2_arg.val);
+else{
+		printf("Reverse: %d", *result_1);
+	}
+
+
+else{
+		printf("Reverse: %d", *result_1);
+	}
+
+server file:::-
+static int  result, rem, reverse=0;
+
+	while(argp->val != 0){
+		rem = argp->val % 10;
+		reverse = (reverse * 10) + rem;
+		argp->val /= 10;
+	}
+
+	result = reverse;
+
+
+circle:::-
+struct input{
+	int val;
+};
+
+program CIRCLEPRO{
+	version CIRCLEVER{
+		int circle(input)=1;
+	}=4;
+}=0x2fffffff;
+
+serverfile:::-
+#include "circle.h"
+
+int *
+circle_4_svc(input *argp, struct svc_req *rqstp)
+{
+	static int  result, area, circ, diameter;
+
+	area = 3.14 * (argp->val * argp->val);
+
+	
+	return &area;
+
+
+	circ = 2 * 3.24 * argp->val;
+
+	return &circ;
+
+	diameter = 2 * argp->val;
+	
+
+
+	return &diameter;
+}
+
+client file::-
+printf("Enter Radius: ");
+	scanf("%d", &circle_4_arg.val);
+else{
+		printf("%d",*result_1);
+
+	}
+
+
+factorial number::---
+struct number{
+	int num1;
+	};
+program FACTPROG{
+version fact{
+int fact(number)=1;
+}=1;
+}=0x2fffffff;
+
+client:
+printf("Enter Your Number:");
+scanf("%d",&fact_1_arg.num1);
+
+else {
+	printf("factorial Number is:%d",*result_1);
+
+}
+
+server::--
+static int input=1;
+	for(int i=1; i<=argp->num1;i++){
+		input =input*i;
+		}
+		result=input;
+
+alphabet::-
+struct input{
+	char val;
+};
+
+program FACTPRO{
+	version ALPHVER{
+
+		string fact(input)=1;
+	}=2;
+
+}=0x2fffffff;
+
+client::-
+printf("Enter a Letter: ");
+	scanf("%c", &fact_2_arg.val);
+
+else{
+		printf("letter you entered id a: %s \n", *result_1);
+	}
+
+srver::-
+if(argp->val=='A' || argp->val=='a'  || argp->val=='E' || argp->val=='e' || argp->val=='I' || argp->val=='i' || argp->val=='O' || argp->val=='o' || argp->val=='U' || argp->val=='u'){
+		result = "Vowel";
+	}
+
+	else{
+		result = "Cosonant";
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
